@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html id="liftcup" class="" lang="en">
-	<head>
+	<!--AJAX<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	</head>
+	</head>-->
 	<body style="background-color: #edf0f5;">
+	
 		<div>
 		</div>
 		<div id="banner" class="banner" style="margin-left: -5px; margin-right: -5px; top: 0px; background-color: #3A5795;">
@@ -26,7 +27,7 @@
 		<div id="below_banner" style="padding-top: 5px;">
 			<div style="float:right; width: 30%;">
 				<h2 style="font-size: 36px;">Sign Up</h2>
-				<form id="SignUpData" action="">
+				<form method="post" action="signup.php">
 						First Name:<br>
 						<input id="fname" type="text" tabindex="1" value="" name="fname" maxlength='20' required></input>
 						<br>
@@ -36,31 +37,9 @@
 						Password:<br>
 						<input id="password" type="text" tabindex="1" value="" name="password" maxlength='20' required></input>
 						<br><br>
-						<input type="button" onclick="getSignedUp" value="Submit">
+						<input type="button" value="Submit">
 				</form>
 			</div>
 		</div>
-		<!--Insert Ajax calls to elasticsearch here-->
-		<script>
-			var endpoint = 'https://ec2-52-33-146-51.us-west-2.compute.amazonaws.com';
-			<!--get data and insert into db-->
-			function getSignedUp(){
-				document.getElementById("SignUpData").submit();
-			}
-		</script>
-		<script>
-			var endpoint = 'https://ec2-52-33-146-51.us-west-2.compute.amazonaws.com';
-			var creds = {
-				size: 2 //get 2 results
-				q: 'uname:admin' //query on the uname field for 'admin'
-			};
-			$.ajax({
-				url: {endpoint}/_search,
-				datatype: 'jsonp',
-				success: function(creds) {
-					alert('Total results found: ' + data.hits.total)
-				}
-			});
-		</script>
 	</body>
 </html>
