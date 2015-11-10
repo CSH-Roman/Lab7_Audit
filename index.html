@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html id="liftcup" class="" lang="en">
+	<!--AJAX<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	</head>-->
+	<body style="background-color: #edf0f5;">
+	
+		<div>
+		</div>
+		<div id="banner" class="banner" style="margin-left: -5px; margin-right: -5px; top: 0px; background-color: #3A5795;">
+			<div style="overflow:auto;">
+				<div  style="float:left;width:70%;">
+					<h2 style="font-size: 42px; color: white;">FaceSpace</h2>
+				</div>
+				<div style="float:right;width:30%;">
+				<form id="Creds" action="test1.php" method="get">
+				    <label style="color:white;">Sign In</label>
+					<br>
+					<label for="uname" style="color:white;">Username</label>
+					<input id="uname" type="text" tabindex="1" value="" name="uname" required></input>
+					<br><br>
+					<label for="password" style="color:white;">Password </label>
+					<input id="password" type="text" tabindex="1" value="" name="password" required></input>
+					<br>
+					<input type="submit"/>
+				</form>
+				</div>
+			</div>
+		</div>
+		<div id="below_banner" style="padding-top: 5px;">
+			<div style="float:right; width: 30%;">
+				<h2 style="font-size: 36px;">Sign Up</h2>
+				<form method="post" action="test2.php">
+						First Name:<br>
+						<input id="fname" type="text" tabindex="1" value="" name="fname" maxlength='20' required></input>
+						<br>
+						Last Name:<br>
+						<input id="lname" type="text" tabindex="1" value="" name="lname" maxlength='20' required></input>
+						<br>
+						Password:<br>
+						<input id="password" type="text" tabindex="1" value="" name="password" maxlength='20' required></input>
+						<br>
+						Username:<br>
+						<input id="uname" type="text" tabindex="1" value="" name="uname" maxlength='20' required></input>
+						<br>
+						Status:<br>
+						<input id="status" type="text" tabindex="1" value="" name="status" maxlength='20' required></input>
+						<br>
+						Profession:<br>
+						<input id="profession" type="text" tabindex="1" value="" name="profession" maxlength='20' required></input>
+						<br><br>
+						<input type="submit"/>
+				</form>
+			</div>
+			<div style="float:left; width: 30%;">
+				<h2 style="font-size: 36px;">Search Users</h2>
+				<form method="get" action="test3.php">
+					Username:<br>
+					<input id="uname" type="text" tabindex="1" value="" name="uname" maxlength='20' required></input>
+					<br><br>
+					<input type="submit"/>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
